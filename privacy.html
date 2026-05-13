@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Privacy Policy – NISC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#06080f;--surface:#0b0f1c;--surface2:#111626;--surface3:#16192a;
+  --border:rgba(99,120,255,0.12);--border2:rgba(99,120,255,0.25);
+  --text:#e8eaf6;--muted:#7880a0;--muted2:#a0a8c0;
+  --accent1:#5b6eff;--accent2:#b06bff;--accent3:#22d3ee;--accent4:#34d399;
+  --grad:linear-gradient(135deg,#5b6eff 0%,#b06bff 55%,#22d3ee 100%);
+  --glass:rgba(255,255,255,0.03);
+  --glow:rgba(91,110,255,0.3);
+  --r:16px;--rs:10px;--t:0.3s cubic-bezier(0.4,0,0.2,1)
+}
+[data-theme="light"]{
+  --bg:#f4f5ff;--surface:#fff;--surface2:#eef0fb;--surface3:#e8eaff;
+  --border:rgba(91,110,255,0.15);--border2:rgba(91,110,255,0.3);
+  --text:#080c1c;--muted:#5a6380;--muted2:#7880a0;
+  --glass:rgba(91,110,255,0.04);--glow:rgba(91,110,255,0.15)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .4s,color .4s;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.2}
+a{color:var(--accent1);text-decoration:none}
+a:hover{text-decoration:underline}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--accent1);border-radius:99px}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;mix-blend-mode:overlay}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:66px;padding:0 clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);background:rgba(6,8,15,0.8);transition:background .4s}
+[data-theme="light"] nav{background:rgba(244,245,255,0.88)}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:var(--text);text-decoration:none}
+.logo:hover{text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:#fff;flex-shrink:0;box-shadow:0 0 20px var(--glow)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 22px;border-radius:99px;font-family:'Syne',sans-serif;font-size:.83rem;font-weight:700;cursor:pointer;transition:all var(--t);border:none;outline:none;letter-spacing:.02em;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid var(--border2);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent1);color:var(--accent1);text-decoration:none}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 0 24px var(--glow)}
+.btn-grad:hover{transform:translateY(-1px);box-shadow:0 4px 32px var(--glow);text-decoration:none}
+#themeBtn{width:38px;height:38px;border-radius:50%;background:var(--glass);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.95rem;transition:all var(--t)}
+#themeBtn:hover{border-color:var(--accent1)}
+
+/* PAGE HERO */
+.page-hero{padding:110px clamp(20px,5vw,80px) 56px;background:var(--surface);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 20% 50%,rgba(91,110,255,0.14) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 80% 20%,rgba(176,107,255,0.08) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(91,110,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(91,110,255,0.05) 1px,transparent 1px);background-size:56px 56px}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:99px;background:var(--glass);border:1px solid var(--border2);font-size:.72rem;font-weight:700;color:var(--accent1);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent1);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-title{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-.04em;margin-bottom:14px}
+.gtext{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+.hero-meta-item{display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--muted);padding:6px 12px;border-radius:8px;background:var(--glass);border:1px solid var(--border)}
+.hero-meta-item strong{color:var(--muted2)}
+
+/* LAYOUT */
+.content-wrap{max-width:1100px;margin:0 auto;padding:56px clamp(20px,5vw,80px) 100px;display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start}
+@media(max-width:860px){.content-wrap{grid-template-columns:1fr;gap:32px}}
+
+/* SIDEBAR TOC */
+.toc{position:sticky;top:86px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;max-height:calc(100vh - 110px);overflow-y:auto}
+@media(max-width:860px){.toc{position:static;max-height:none}}
+.toc-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent1);margin-bottom:14px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list li a{display:block;font-size:.8rem;color:var(--muted);padding:6px 10px;border-radius:8px;transition:all var(--t);border:1px solid transparent;text-decoration:none;line-height:1.4}
+.toc-list li a:hover{color:var(--accent1);background:rgba(91,110,255,.06);border-color:var(--border);text-decoration:none}
+.toc-list li a.active{color:var(--accent1);background:rgba(91,110,255,.08);border-color:var(--border2);font-weight:600}
+.toc-divider{height:1px;background:var(--border);margin:10px 0}
+
+/* MAIN CONTENT */
+.doc-body{min-width:0}
+.doc-section{margin-bottom:48px;scroll-margin-top:90px}
+.section-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:var(--grad);font-size:.72rem;font-weight:800;color:#fff;margin-bottom:12px;font-family:'Syne',sans-serif}
+.section-title{font-size:1.25rem;font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
+.section-body{font-size:.9rem;color:var(--muted2);line-height:1.85}
+.section-body p{margin-bottom:14px}
+.section-body p:last-child{margin-bottom:0}
+.section-body strong{color:var(--text);font-weight:600}
+.section-body ul,.section-body ol{padding-left:20px;margin-bottom:14px;display:flex;flex-direction:column;gap:7px}
+.section-body li{line-height:1.7}
+.section-body li::marker{color:var(--accent1)}
+
+/* HIGHLIGHT BOXES */
+.info-box{padding:16px 18px;border-radius:var(--rs);margin-bottom:20px;border-left:3px solid;font-size:.875rem;line-height:1.7}
+.info-box.blue{background:rgba(91,110,255,.06);border-color:var(--accent1);color:var(--muted2)}
+.info-box.green{background:rgba(52,211,153,.06);border-color:var(--accent4);color:var(--muted2)}
+.info-box.yellow{background:rgba(251,191,36,.06);border-color:#fbbf24;color:var(--muted2)}
+.info-box.red{background:rgba(239,68,68,.06);border-color:#ef4444;color:var(--muted2)}
+.info-box strong{color:var(--text)}
+
+/* DATA TABLE */
+.data-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:.83rem}
+.data-table th{text-align:left;padding:10px 14px;background:var(--surface2);color:var(--accent1);font-family:'Syne',sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border)}
+.data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--muted2);vertical-align:top;line-height:1.6}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--glass)}
+
+/* CONTACT CARD */
+.contact-card{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--r);padding:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:16px}
+.contact-icon{width:48px;height:48px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.contact-info{flex:1}
+.contact-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent1);margin-bottom:4px}
+.contact-val{font-size:.95rem;font-weight:600;color:var(--text)}
+.contact-sub{font-size:.78rem;color:var(--muted);margin-top:2px}
+
+/* DIVIDER */
+.doc-divider{height:1px;background:var(--border);margin:48px 0}
+
+/* BACK TO TOP */
+.back-top{position:fixed;bottom:28px;right:28px;width:42px;height:42px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;box-shadow:0 4px 20px var(--glow);opacity:0;transform:translateY(10px);transition:all var(--t);z-index:200;border:none;color:#fff}
+.back-top.show{opacity:1;transform:translateY(0)}
+.back-top:hover{transform:translateY(-3px);box-shadow:0 8px 28px var(--glow)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">N</div>
+    <span>NISC</span>
+  </a>
+  <div class="nav-right">
+    <button id="themeBtn" title="Toggle theme">🌙</button>
+    <a href="terms.html" class="btn btn-outline">Terms of Use</a>
+    <a href="join.html" class="btn btn-grad">Join NISC →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="page-badge"><span class="badge-dot"></span> Legal Document</div>
+    <h1 class="hero-title">Privacy <span class="gtext">Policy</span></h1>
+    <p style="font-size:.95rem;color:var(--muted);line-height:1.75;max-width:560px">We respect your privacy. This policy explains what data we collect, why we collect it, and how we protect it. NISC is a free, non-commercial community — we never sell your data.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">📅 <strong>Effective:</strong> January 1, 2025</div>
+      <div class="hero-meta-item">🔄 <strong>Last Updated:</strong> May 2025</div>
+      <div class="hero-meta-item">📍 <strong>Jurisdiction:</strong> Nepal</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <!-- SIDEBAR TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1">1. Who We Are</a></li>
+      <li><a href="#s2">2. Data We Collect</a></li>
+      <li><a href="#s3">3. How We Use Your Data</a></li>
+      <li><a href="#s4">4. Data Sharing</a></li>
+      <li><a href="#s5">5. Data Storage & Security</a></li>
+      <li><a href="#s6">6. Your Rights</a></li>
+      <li><a href="#s7">7. Cookies</a></li>
+      <li><a href="#s8">8. Third-Party Links</a></li>
+      <li><a href="#s9">9. Children's Privacy</a></li>
+      <li><a href="#s10">10. Policy Changes</a></li>
+      <li><a href="#s11">11. Contact Us</a></li>
+    </ul>
+    <div class="toc-divider"></div>
+    <a href="terms.html" style="display:block;font-size:.78rem;color:var(--accent1);padding:8px 10px;border-radius:8px;background:rgba(91,110,255,.06);border:1px solid var(--border);text-decoration:none;text-align:center;font-weight:600">📄 View Terms of Use →</a>
+  </aside>
+
+  <!-- MAIN BODY -->
+  <main class="doc-body">
+
+    <div class="info-box blue">
+      <strong>Plain English Summary:</strong> NISC is a free student tech community. We collect your name, contact details, and interests only to run events and send you relevant updates. We never sell your data. You can ask us to delete your information at any time by emailing <a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a>.
+    </div>
+
+    <!-- S1 -->
+    <div class="doc-section" id="s1">
+      <div class="section-num">1</div>
+      <div class="section-title">Who We Are</div>
+      <div class="section-body">
+        <p>NISC (Nepalgunj IT Student Community) is a free, volunteer-run, non-commercial student tech community based in Nepalgunj, Banke, Nepal. We operate across far-western Nepal, including Surkhet, Dhangadhi, Dang, Bardiya, and surrounding districts.</p>
+        <p>We are not a registered company or corporation. NISC is a community initiative founded in 2022 to support IT students and tech enthusiasts in far-western Nepal through free workshops, mentorship, events, and networking.</p>
+        <p><strong>Contact:</strong> For all privacy-related questions, email us at <a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- S2 -->
+    <div class="doc-section" id="s2">
+      <div class="section-num">2</div>
+      <div class="section-title">Data We Collect</div>
+      <div class="section-body">
+        <p>We collect information only when you voluntarily provide it — for example, when you join NISC or register for an event. We do <strong>not</strong> collect data silently or without your knowledge.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Examples</th>
+              <th>When Collected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identity</strong></td>
+              <td>First name, last name</td>
+              <td>Membership signup, event registration</td>
+            </tr>
+            <tr>
+              <td><strong>Contact</strong></td>
+              <td>Email address, phone number</td>
+              <td>Membership signup, event registration</td>
+            </tr>
+            <tr>
+              <td><strong>Location</strong></td>
+              <td>City / district</td>
+              <td>Membership signup, event registration</td>
+            </tr>
+            <tr>
+              <td><strong>Profile</strong></td>
+              <td>Age range, institution, field of study, skill level</td>
+              <td>Membership signup</td>
+            </tr>
+            <tr>
+              <td><strong>Interests</strong></td>
+              <td>Tech interests, goals, learning preferences</td>
+              <td>Membership signup</td>
+            </tr>
+            <tr>
+              <td><strong>Event Data</strong></td>
+              <td>Event preferences, attendance type, expectations</td>
+              <td>Event registration</td>
+            </tr>
+            <tr>
+              <td><strong>Usage (basic)</strong></td>
+              <td>Pages visited (no personal tracking)</td>
+              <td>Automatically when visiting our website</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box green">
+          <strong>What we do NOT collect:</strong> We do not collect passwords, financial information, ID numbers, biometric data, or any sensitive personal information. We do not use tracking pixels or behavioral advertising tools.
+        </div>
+      </div>
+    </div>
+
+    <!-- S3 -->
+    <div class="doc-section" id="s3">
+      <div class="section-num">3</div>
+      <div class="section-title">How We Use Your Data</div>
+      <div class="section-body">
+        <p>We use your information strictly for community operations. Here is exactly how:</p>
+        <ul>
+          <li><strong>To confirm your membership</strong> — sending a welcome email after you join NISC</li>
+          <li><strong>To manage event registrations</strong> — confirming your spot, sending event details, reminders, and follow-ups</li>
+          <li><strong>To send community updates</strong> — newsletters, upcoming event announcements, workshop invites (you can unsubscribe anytime)</li>
+          <li><strong>To add you to WhatsApp groups</strong> — only if you consented during signup</li>
+          <li><strong>To match you with mentors</strong> — using your skill level and interests to connect you with relevant mentors</li>
+          <li><strong>To improve our programs</strong> — understanding what skills our members want helps us plan better workshops</li>
+          <li><strong>To respond to your queries</strong> — when you contact us directly</li>
+        </ul>
+        <div class="info-box yellow">
+          <strong>We will never:</strong> Use your data for advertising, sell it to companies, share it for marketing purposes, or use it for any purpose not described in this policy without asking you first.
+        </div>
+      </div>
+    </div>
+
+    <!-- S4 -->
+    <div class="doc-section" id="s4">
+      <div class="section-num">4</div>
+      <div class="section-title">Data Sharing</div>
+      <div class="section-body">
+        <p>We take data sharing seriously. Your data may be accessed by:</p>
+        <ul>
+          <li><strong>NISC core team members</strong> — volunteer organizers who manage events and community operations, strictly on a need-to-know basis</li>
+          <li><strong>Google (data storage)</strong> — your form submissions are stored in Google Sheets, which is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
+          <li><strong>Event speakers/mentors</strong> — only your name and contact details, and only if you registered for their specific session, with your prior consent</li>
+        </ul>
+        <p>We do <strong>not</strong> share your data with:</p>
+        <ul>
+          <li>Advertisers or marketing companies</li>
+          <li>Recruiters or employers (without your explicit request)</li>
+          <li>Any third party for commercial purposes</li>
+          <li>Government agencies (unless legally required)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- S5 -->
+    <div class="doc-section" id="s5">
+      <div class="section-num">5</div>
+      <div class="section-title">Data Storage & Security</div>
+      <div class="section-body">
+        <p>Your submitted data is stored in <strong>Google Sheets</strong> secured to the NISC Gmail account (<a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a>). Access is restricted to NISC core team members only.</p>
+        <p>We take the following precautions to protect your data:</p>
+        <ul>
+          <li>Google account is secured with two-factor authentication (2FA)</li>
+          <li>Spreadsheet access is restricted — not publicly accessible</li>
+          <li>Only authorized NISC team members can view member data</li>
+          <li>We regularly review who has access and remove inactive team members</li>
+        </ul>
+        <div class="info-box yellow">
+          <strong>Retention:</strong> We keep your data for as long as you are an active NISC member. If you request deletion, we will remove your information from our records within 7 business days.
+        </div>
+        <p>While we take reasonable steps to protect your data, no internet transmission is 100% secure. If you believe your data has been compromised, please contact us immediately at <a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- S6 -->
+    <div class="doc-section" id="s6">
+      <div class="section-num">6</div>
+      <div class="section-title">Your Rights</div>
+      <div class="section-body">
+        <p>You have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Right to Access</strong> — You can request a copy of all data we hold about you</li>
+          <li><strong>Right to Correction</strong> — You can ask us to correct inaccurate information</li>
+          <li><strong>Right to Deletion</strong> — You can request complete deletion of your data ("right to be forgotten")</li>
+          <li><strong>Right to Opt-Out</strong> — You can unsubscribe from emails or WhatsApp updates at any time</li>
+          <li><strong>Right to Object</strong> — You can object to how we use your data</li>
+          <li><strong>Right to Data Portability</strong> — You can request your data in a readable format (CSV/PDF)</li>
+        </ul>
+        <p>To exercise any of these rights, email us at <a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a> with the subject line <strong>"Data Request – [Your Name]"</strong>. We will respond within 7 business days.</p>
+      </div>
+    </div>
+
+    <!-- S7 -->
+    <div class="doc-section" id="s7">
+      <div class="section-num">7</div>
+      <div class="section-title">Cookies</div>
+      <div class="section-body">
+        <p>Our website is a static HTML site and currently <strong>does not use cookies</strong> for tracking, analytics, or advertising.</p>
+        <p>If we ever add analytics tools (such as Google Analytics), we will update this policy and add a cookie consent notice before doing so. You will always be notified and given a choice.</p>
+      </div>
+    </div>
+
+    <!-- S8 -->
+    <div class="doc-section" id="s8">
+      <div class="section-num">8</div>
+      <div class="section-title">Third-Party Links</div>
+      <div class="section-body">
+        <p>Our website may contain links to external platforms such as Facebook, Discord, WhatsApp, GitHub, LinkedIn, and YouTube. When you click these links, you leave NISC's website and are governed by those platforms' own privacy policies.</p>
+        <p>We are not responsible for the privacy practices of any third-party websites. We encourage you to review their policies before sharing personal information on those platforms.</p>
+      </div>
+    </div>
+
+    <!-- S9 -->
+    <div class="doc-section" id="s9">
+      <div class="section-num">9</div>
+      <div class="section-title">Children's Privacy</div>
+      <div class="section-body">
+        <p>NISC welcomes students of all ages, including those under 16 (our "Under 16" age group). For members under 16, we strongly recommend parental awareness of their participation in our community.</p>
+        <p>We do not knowingly collect sensitive data from children beyond what is needed for community participation (name, email, phone for event coordination). If a parent or guardian believes their child's data has been collected inappropriately, please contact us at <a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a> and we will promptly delete it.</p>
+      </div>
+    </div>
+
+    <!-- S10 -->
+    <div class="doc-section" id="s10">
+      <div class="section-num">10</div>
+      <div class="section-title">Policy Changes</div>
+      <div class="section-body">
+        <p>We may update this Privacy Policy from time to time. When we do:</p>
+        <ul>
+          <li>The "Last Updated" date at the top of this page will change</li>
+          <li>Significant changes will be announced via our WhatsApp community group and email newsletter</li>
+          <li>Continued use of NISC services after changes implies acceptance of the updated policy</li>
+        </ul>
+        <p>We encourage you to review this page periodically. Previous versions of this policy are available upon request.</p>
+      </div>
+    </div>
+
+    <!-- S11 -->
+    <div class="doc-section" id="s11">
+      <div class="section-num">11</div>
+      <div class="section-title">Contact Us</div>
+      <div class="section-body">
+        <p>For any privacy questions, data requests, or concerns, please reach out to us:</p>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <div class="contact-label">Email (Primary)</div>
+            <div class="contact-val"><a href="mailto:niscnpj@gmail.com">niscnpj@gmail.com</a></div>
+            <div class="contact-sub">We respond within 7 business days. Use subject: "Privacy – [Your Request]"</div>
+          </div>
+        </div>
+        <div class="contact-card" style="margin-top:12px">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <div class="contact-label">Community Location</div>
+            <div class="contact-val">NISC Hub, Nepalgunj-1, Banke, Nepal</div>
+            <div class="contact-sub">Far-western Nepal — serving Nepalgunj, Surkhet, Dhangadhi & beyond</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div style="text-align:center;padding:10px 0 20px">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:16px">Looking for our Terms of Use?</p>
+      <a href="terms.html" class="btn btn-grad" style="display:inline-flex">📄 Read Terms of Use →</a>
+    </div>
+
+  </main>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// Theme toggle
+document.getElementById('themeBtn').onclick=()=>{
+  const d=document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme',d?'light':'dark');
+  document.getElementById('themeBtn').textContent=d?'🌙':'☀️';
+};
+
+// Back to top
+window.addEventListener('scroll',()=>{
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 300);
+});
+
+// Active TOC
+const sections = document.querySelectorAll('.doc-section');
+const tocLinks  = document.querySelectorAll('.toc-list a');
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(l=>l.classList.remove('active'));
+      const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+      if(active) active.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
