@@ -324,10 +324,6 @@ select.form-input{cursor:pointer;appearance:none;background-image:url("data:imag
       <div class="form-group">
         <label class="form-label" style="margin-bottom:10px">Participation Preference</label>
         <div class="form-check-row">
-          <input type="checkbox" id="pIn" checked/>
-          <label for="pIn" class="form-check-label">🏛 In-person (at venue)<span class="form-check-sub">Attend the session physically at the listed location</span></label>
-        </div>
-        <div class="form-check-row">
           <input type="checkbox" id="pOn"/>
           <label for="pOn" class="form-check-label">💻 Online (live stream)<span class="form-check-sub">Join via Zoom link (if available for this event)</span></label>
         </div>
@@ -362,7 +358,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4ms3KauDHYF
 
 const events = [
   {
-    id:1, type:'Online Session', status:'open', statusLabel:'Registration Open',
+    id:1, type:'Online Session', status:'open', statusLabel:'Closing soon',
     title:'How to Build a Personal Portfolio Website and LinkedIn Profile',
     desc:'A hands-on workshop where you will create your own portfolio website and optimize your LinkedIn profile to attract recruiters and showcase your projects effectively.',
     date:'Not fixed yet', time:'Not fixed yet', location:'Virtual (Teams/Zoom)',
